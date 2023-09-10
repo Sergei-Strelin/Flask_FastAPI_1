@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Мужские брюки
+{% endblock %}
+
+{% block content %}
+    <div class="trousers">
+        <h2>Мужская Мужские брюки</h2>
+        {% for trousers in content_block%}
+            <h3>{{trousers.type}}</h3>
+            <img src="{{trousers.pict}}" alt="фото">
+            <p> стоимость: {{trousers.cost}} руб.</p>
+        {% endfor%}
+    </div>
+{% endblock %}
